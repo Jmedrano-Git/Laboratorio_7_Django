@@ -11,6 +11,8 @@ def api_root(request, format=None):
         'message': 'Quiz API v1',
         'endpoints': {
             'quizzes': reverse('quiz-list', request=request, format=format),
+            'questions': reverse('question-list', request=request, format=format),
+            'choices': reverse('choice-list', request=request, format=format),
         }
     })
 
